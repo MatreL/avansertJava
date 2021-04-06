@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new Task | KristianiaProject</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Add new Tasks</h1>
+
+<form method="POST" action="/api/newTask">
+    <div><label>Name: <input type="text" name="taskName" /></label></div>
+    <div><label>Display Color: <input type="color" name="color" /></label></div>
+
+    <button>Add</button>
+</form>
+
+<div>
+    <a href="/index.html">Return to front page</a>
+</div>
+</body>
+</html>

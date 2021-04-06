@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Worker</title>
+</head>
+<body>
+<h2>Edit Worker</h2>
+
+<form method="post" action="/api/updateWorker">
+    <p>Worker: <select name="workerId" id="workerId" ></select></p>
+    <p>New Task: <select name="taskId" id="taskId" ></select></p>
+    <button>Submit</button>
+</form>
+
+</body>
+<script>
+    fetch("/api/workersOptions").then(response => response.text()).then(html => {
+        document.getElementById("workerId").innerHTML = html;
+    });
+    fetch("/api/taskOptions").then(response => response.text()).then(html => {
+        document.getElementById("taskId").innerHTML = html;
+    });
+</script>
+</html>

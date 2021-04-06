@@ -1,0 +1,23 @@
+@startuml
+
+actor User
+participant WebBrowser
+
+box Java Server
+    participant HttpServer
+    participant WorkerDao
+end box
+
+database PostgreSQL
+
+User -> WebBrowser: List Workers
+WebBrowser -> HttpServer: /index.html
+WebBrowser <-- HttpServer: <html>.....<script>fetch()</html>
+WebBrowser -> HttpServer: /api/Workers
+HttpServer -> WorkerDao: list()
+WorkerDao -> PostgreSQL: SELECT * FROM WORKERS
+WorkerDao <-- PostgreSQL: ResultSet
+HttpServer <-- WorkerDao: List<Worker>
+WebBrowser <-- HttpServer: <li> name: Johannes Java Email: johannes@java.no </li>..<li></li>
+
+@enduml

@@ -1,0 +1,1 @@
+alter table workers add column task_id integer null references worker_tasks(id);
