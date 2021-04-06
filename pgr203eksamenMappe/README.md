@@ -1,8 +1,6 @@
 # pgr203eksamen
 ![Java CI with Maven](https://github.com/kristiania/pgr203innevering3-Lexberg/workflows/Java%20CI%20with%20Maven/badge.svg)
 
-Issues to another group: https://github.com/kristiania/pgr203eksamen-maikururu/issues
-
 
 Parprog Film : https://screencast-o-matic.com/watch/cYXho6Mj2U
 
